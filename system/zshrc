@@ -1,0 +1,30 @@
+# Use powerline
+USE_POWERLINE="true"
+# Source manjaro-zsh-configuration
+if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
+  source /usr/share/zsh/manjaro-zsh-config
+fi
+# Use manjaro zsh prompt
+if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+  source /usr/share/zsh/manjaro-zsh-prompt
+fi
+
+if [[ -n $SSH_CONNECTION ]]; then
+	export EDITOR='vim'
+else
+	export EDITOR='nvim'
+fi
+
+
+bindkey '^ ' autosuggest-accept
+
+
+if [[ -e $HOME/dotfiles/system/alias ]]; then
+	source $HOME/dotfiles/system/alias
+fi
+
+if [[ -e $HOME/dotfiles/system/functions ]];then
+	source $HOME/dotfiles/system/functions
+fi
+
+

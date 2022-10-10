@@ -1,0 +1,8 @@
+alias vim="nvim"
+alias zc="nvim ~/.zshrc"
+alias l="ls -l"
+alias la="ls -la"
+alias ld="ls -ld "   # List in long format, only directories
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
