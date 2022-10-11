@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env sh
 
 # Checking the dotfiles repository is in the correct place
 if [[ "$PWD" != "$HOME/dotfiles" ]]; then
@@ -12,7 +12,7 @@ git pull
 
 timestamp=$(date +%s)
 echo "Creating Backup Directory $HOME/dotfiles/.backup/$timestamp" 1>&2
-mkdir $HOME/dotfiles/.backup/$timestamp
+mkdir -p $HOME/dotfiles/.backup/$timestamp
 	
 # Zsh Config
 
