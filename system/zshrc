@@ -27,4 +27,5 @@ if [[ -e $HOME/dotfiles/system/functions ]];then
 	source $HOME/dotfiles/system/functions
 fi
 
+export GPG_TTY=$(tty)
 
