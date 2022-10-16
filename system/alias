@@ -6,3 +6,4 @@ alias ld="ls -ld "   # List in long format, only directories
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias ssh="TERM='xterm-256color' ssh" #Fix for kitty ssh sessions
