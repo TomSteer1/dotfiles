@@ -27,5 +27,8 @@ if [[ -e $HOME/dotfiles/system/functions ]];then
 	source $HOME/dotfiles/system/functions
 fi
 
+# Fixes git gpg prompts
 export GPG_TTY=$(tty)
 
+# Rust variables
+source "$HOME/.cargo/env"
