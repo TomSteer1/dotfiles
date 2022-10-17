@@ -28,8 +28,9 @@ fi
 # Installing oh my zsh
 
 if [[ ! -d $HOME/.oh-my-zsh ]]; then
-	echo "Installing Oh My Zsh" 1>&2
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" &
+	echo "Installing Oh My Zsh" 1>&
+	RUNZSH=no
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
 	echo "Oh My Zsh already installed" 1>&2
 fi
