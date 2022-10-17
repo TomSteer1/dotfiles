@@ -2,4 +2,4 @@ configuration {
 	modes: "window,drun,run,ssh,windowcd,filebrowser";
 }
 
-@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+@theme "/usr/share/rofi/themes/Monokai.rasi"
