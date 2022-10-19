@@ -2,11 +2,11 @@ alias vim="nvim"
 alias zc="nvim ~/.zshrc"
 alias l="ls -l"
 alias la="ls -la"
-alias ld="ls -ld "   # List in long format, only directories
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias ssh="TERM='xterm-256color' ssh" #Fix for kitty ssh sessions
+alias kssh="kitty +kitten ssh"
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
