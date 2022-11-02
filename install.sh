@@ -72,6 +72,11 @@ if [[ -d $HOME/.config/rofi ]]; then
 fi
 ln -s $HOME/dotfiles/config/rofi $HOME/.config/rofi
 
+if [[ -d $HOME/.cofig/neofetch ]]; then
+	echo "Backing up neofetch config" 1>&2
+	mv $HOME/.config/neofetch $HOME/dotfiles/.backup/$timestamp/neofetch
+fi
+ln -s $HOME/dotfiles/config/neofetch $HOME/.config/neofetch
 
 if [ ! command -v kitty  &> /dev/null ]; then
 	echo "Installing kitty" 1>&2
