@@ -1,9 +1,9 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # Checking the dotfiles repository is in the correct place
 if [[ "$PWD" != "$HOME/dotfiles" ]]; then
-	echo "dotfiles directory needs to be located as $HOME/dotfiles \nand install script needs to be executed in the dotfile directory" 1>&2
-	return 1
+	echo "dotfiles directory needs to be located as $HOME/dotfiles and install script needs to be executed in the dotfile directory" 1>&2
+	exit 1
 fi
 
 # Checking for updates
