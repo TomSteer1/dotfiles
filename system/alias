@@ -12,3 +12,5 @@ alias df='df -h'                                                # Human-readable
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
 alias clear="printf '\033[2J\033[3J\033[1;1H'"
+alias c="printf '\033[2J\033[3J\033[1;1H'"
+
