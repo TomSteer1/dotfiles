@@ -2,7 +2,6 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'preservim/nerdtree'
   Plug 'jistr/vim-nerdtree-tabs'
   
-	Plug 'neovim/nvim-lspconfig'
 	Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/cmp-path'
@@ -12,7 +11,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'hrsh7th/vim-vsnip'
 
 	Plug 'github/copilot.vim'
-
+	Plug 'neovim/nvim-lspconfig'
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
@@ -20,7 +19,21 @@ call plug#begin('~/.config/nvim/plugged')
 	
 	Plug 'ellisonleao/gruvbox.nvim'
 
-call plug#end()
+	Plug 'simrat39/symbols-outline.nvim'
+
+	Plug 'junnplus/lsp-setup.nvim'
+	Plug 'neovim/nvim-lspconfig'
+	Plug 'williamboman/mason.nvim'
+	Plug 'williamboman/mason-lspconfig.nvim'
+	Plug 'WhoIsSethDaniel/mason-tool-installer.nvim'
+
+	Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+
+	Plug 'nvim-lualine/lualine.nvim'
+	" If you want to have icons in your statusline choose one of these
+	Plug 'kyazdani42/nvim-web-devicons'
+
+	call plug#end()
 
 set autoindent
 set number
@@ -30,10 +43,12 @@ set ic
 " Theme
 
 colorscheme gruvbox
+"colorscheme tokyonight-night
 
 " Auto Complete
 
 runtime cmp.vim
+runtime source-outline.vim
 
 " Auto Commands
 

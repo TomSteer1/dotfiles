@@ -1,6 +1,6 @@
 alias vim="nvim"
 alias zc="nvim ~/.zshrc"
-alias l="ls -l"
+alias l="ls -lh"
 alias la="ls -la"
 alias ..="cd .."
 alias ...="cd ../.."
