@@ -39,22 +39,9 @@ if [[ -e $HOME/dotfiles/system/binds ]]; then
 	source $HOME/dotfiles/system/binds
 fi
 
-# Fixes gpg prompts
-export GPG_TTY=$(tty)
-
-# Rust variables
-if [[ -e $HOME/.cargo/env ]]; then
-	source "$HOME/.cargo/env"
+if [[ -e $HOME/dotfiles/system/local_exports ]]; then
+	source $HOME/dotfiles/system/local_exports
 fi
 
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Add scripts to Path
-export PATH="$HOME/Documents/scripts/bin:$PATH"
-export PATH="$HOME/.emacs.d/bin:$PATH"
-
-# eval "$(starship init zsh)"
-
+# Fixes gpg prompts
+export GPG_TTY=$(tty)

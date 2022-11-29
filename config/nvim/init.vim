@@ -33,7 +33,9 @@ call plug#begin('~/.config/nvim/plugged')
 	" If you want to have icons in your statusline choose one of these
 	Plug 'kyazdani42/nvim-web-devicons'
 
-	call plug#end()
+"	Plug 'romgrk/barbar.nvim'
+
+call plug#end()
 
 set autoindent
 set number
@@ -61,5 +63,5 @@ let g:copilot_node_command = "/home/tom/.nvm/versions/node/v17.9.1/bin/node"
 " Binds
 
 map <F5> :NERDTreeTabsToggle<CR>
-"map d :bd<CR>
+"map <F8> :bd<CR>
 map <F7> :Telescope find_files<CR>
