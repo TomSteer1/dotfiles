@@ -14,3 +14,4 @@ alias gitu='git add . && git commit && git push'
 alias clear="printf '\033[2J\033[3J\033[1;1H'"
 alias c="printf '\033[2J\033[3J\033[1;1H'"
 alias tl="task list"
+alias gdb="gdb -q"
