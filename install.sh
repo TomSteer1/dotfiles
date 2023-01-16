@@ -15,15 +15,8 @@ echo "Creating Backup Directory $HOME/dotfiles/.backup/$timestamp" 1>&2
 mkdir -p $HOME/dotfiles/.backup/$timestamp
 
 
-# Installing zsh
-
-if [ ! command -v zsh &> /dev/null ]; then
-	echo "Installing zsh" 1>&2
-	sudo pacman -S zsh
-else
-	echo "ZSH already installed" 1>&2
-fi
-
+# Installing packages
+sudo pacman -S polybar bspwm sxhkd rofi feh kitty neovim zsh --noconfirm
 
 # Installing oh my zsh
 
@@ -92,5 +85,26 @@ if [[ -d $HOME/.config/kitty ]]; then
 	mv $HOME/.config/kitty $HOME/dotfiles/.backup/$timestamp/kitty
 fi
 ln -s $HOME/dotfiles/config/kitty $HOME/.config/kitty
+
+
+
+
+if [[ -d $HOME/.config/polybar ]]; then
+	echo "Backing up polybar config" 1>&2
+	mv $HOME/.config/polybar $HOME/dotfiles/.backup/$timestamp/polybar
+fi
+ln -s $HOME/dotfiles/desktop/polybar $HOME/.config/polybar
+
+if [[ -d $HOME/.config/bspwm ]] ; then
+	echo "Backing up bspwm config" 1>&2
+	mv $HOME/.config/bspwm $HOME/dotfiles/.backup/$timestamp/bspwm
+fi
+ln -s $HOME/dotfiles/desktop/bspwm $HOME/.config/bspwm
+
+if [[ -d $HOME/.config/sxhkd ]] ; then
+	echo "Backing up sxhkd config" 1>&2
+	mv $HOME/.config/sxhkd $HOME/dotfiles/.backup/$timestamp/sxhkd
+fi
+ln -s $HOME/dotfiles/desktop/sxhkd $HOME/.config/sxhkd
 
 

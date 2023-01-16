@@ -33,9 +33,16 @@ call plug#begin('~/.config/nvim/plugged')
 	" If you want to have icons in your statusline choose one of these
 	Plug 'kyazdani42/nvim-web-devicons'
 
-"	Plug 'romgrk/barbar.nvim'
+	Plug 'romgrk/barbar.nvim'
+	
+	Plug 'lervag/vimtex'
+
+	Plug 'SirVer/ultisnips'
+	Plug 'honza/vim-snippets'
 
 call plug#end()
+
+filetype plugin on
 
 set autoindent
 set number
@@ -65,3 +72,8 @@ let g:copilot_node_command = "/home/tom/.nvm/versions/node/v17.9.1/bin/node"
 map <F5> :NERDTreeTabsToggle<CR>
 "map <F8> :bd<CR>
 map <F7> :Telescope find_files<CR>
+
+" vim-snippets
+
+let g:UltiSnipsExpandTrigger="<F8>"
+let g:vimtex_view_method="zathura"
