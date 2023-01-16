@@ -1,4 +1,4 @@
-# Made for manjaro (others will be later)
+# Made for manjaro
 
 # Installation
 1. Clone repo `git clone https://github.com/TomSteer1/dotfiles` in the home directory
