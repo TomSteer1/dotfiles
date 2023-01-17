@@ -1,0 +1,5 @@
+#!/bin/bash
+if [[ $(xrandr -q | grep -q " connected" | wc -l ) -ne 1 ]]; then
+	sleep 3
+fi
+~/.config/bspwm/scripts/monitors.sh&disown

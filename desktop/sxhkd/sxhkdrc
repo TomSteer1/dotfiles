@@ -17,7 +17,7 @@ super + @space
 super + shift + Escape
 	pkill -USR1 -x sxhkd
 
-super + l 
+super + ctrl + l 
 	light-locker-command -l
 
 # media keys
@@ -41,9 +41,9 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
 	xbacklight -dec 10
 
-# Screenshot with flameshot
+# Screenshot
 @Print
-	escrotum -s ~/Pictures/Screenshot_%Y%m%d-%H%M%S.png
+	escrotum -s -C ~/Pictures/Screenshots/Screenshot_%Y%m%d-%H%M%S.png
 
 
 #
