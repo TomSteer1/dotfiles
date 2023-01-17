@@ -16,7 +16,7 @@ mkdir -p $HOME/dotfiles/.backup/$timestamp
 
 
 # Installing packages
-sudo pacman -S polybar bspwm sxhkd rofi feh kitty neovim zsh --noconfirm
+sudo pacman -S polybar bspwm sxhkd rofi feh kitty neovim zsh autorandr --noconfirm
 
 # Installing oh my zsh
 
@@ -86,9 +86,6 @@ if [[ -d $HOME/.config/kitty ]]; then
 fi
 ln -s $HOME/dotfiles/config/kitty $HOME/.config/kitty
 
-
-
-
 if [[ -d $HOME/.config/polybar ]]; then
 	echo "Backing up polybar config" 1>&2
 	mv $HOME/.config/polybar $HOME/dotfiles/.backup/$timestamp/polybar
@@ -107,4 +104,8 @@ if [[ -d $HOME/.config/sxhkd ]] ; then
 fi
 ln -s $HOME/dotfiles/desktop/sxhkd $HOME/.config/sxhkd
 
-
+if [[ -d $HOME/.config/autorandr ]] ; then
+	echo "Backing up autorandr config" 1>&2
+	mv $HOME/.config/autorandr $HOME/dotfiles/.backup/$timestamp/autorandr
+fi
+ln -s $HOME/dotfiles/desktop/autorandr $HOME/.config/autorandr
