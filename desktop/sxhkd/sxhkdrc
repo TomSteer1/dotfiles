@@ -8,10 +8,14 @@ super + Return
 
 # program launcher
 super + r 
-	rofi -show drun
+	~/.config/rofi/scripts/launcher.sh
 
 super + @space
 	rofi -show window
+
+# scratchpad
+super + shift + @q
+	~/Documents/scripts/scratchpad
 
 # make sxhkd reload its configuration files:
 super + shift + Escape
@@ -61,7 +65,7 @@ super + {_,shift + }w
 # power menu
 
 super + Escape
-	rofi -show p -modi p:rofi-power-menu -lines 6 -width 20
+	~/.config/rofi/scripts/powermenu.sh
 
 
 # alternate between the tiled and monocle layout
