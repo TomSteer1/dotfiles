@@ -49,6 +49,8 @@ set number
 set tabstop=2
 set shiftwidth=2
 set ic
+set clipboard=unnamedplus
+
 " Theme
 
 colorscheme gruvbox
