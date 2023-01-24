@@ -6,6 +6,11 @@
 super + Return
 	kitty
 
+
+# lock screen 
+control + alt + super + l
+	light-locker-command -l
+
 # program launcher
 super + r 
 	~/.config/rofi/scripts/launcher.sh
@@ -20,9 +25,6 @@ super + shift + @q
 # make sxhkd reload its configuration files:
 super + shift + Escape
 	pkill -USR1 -x sxhkd
-
-super + ctrl + l 
-	light-locker-command -l
 
 # media keys
 XF86AudioRaiseVolume
@@ -47,7 +49,7 @@ XF86MonBrightnessDown
 
 # Screenshot
 @Print
-	escrotum -s -C ~/Pictures/Screenshots/Screenshot_%Y%m%d-%H%M%S.png
+	escrotum -s ~/Pictures/Screenshots/Screenshot_%Y%m%d-%H%M%S.png -e 'notify-send "Screenshot saved to $f" & xclip -selection clipboard -t image/png -i $f'
 
 
 #
