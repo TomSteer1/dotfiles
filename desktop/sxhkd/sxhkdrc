@@ -15,6 +15,9 @@ control + alt + super + l
 super + r 
 	~/.config/rofi/scripts/launcher.sh
 
+super + alt + p 
+	~/.config/rofi/scripts/shortcutmenu.sh
+
 super + @space
 	rofi -show window
 
