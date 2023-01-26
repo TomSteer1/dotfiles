@@ -1,3 +1,4 @@
 .backup
+.config
 config/nvim/plugged/*
 system/local_exports

@@ -3,6 +3,11 @@
 INTERNAL_MONITOR="eDP1"
 EXTERNAL_MONITOR="HDMI1"
 
+if [[ -e $HOME/dotfiles/.config ]]; then
+		source $HOME/dotfiles/.config
+fi
+
+
 monitor_add() {
   # Move first 5 desktops to external monitor
   for desktop in $(bspc query -D --names -m "$INTERNAL_MONITOR" | tail -n 5); do

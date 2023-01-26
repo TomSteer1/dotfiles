@@ -22,6 +22,12 @@ udiskie -s &
 
 INTERNAL_MONITOR="eDP1"
 EXTERNAL_MONITOR="HDMI1"
+
+if [[ -e $HOME/dotfiles/.config ]]; then
+		source $HOME/dotfiles/.config
+fi
+
+
 if [[ $(xrandr -q | grep "${EXTERNAL_MONITOR} connected") ]]; then 
 	bspc monitor "$INTERNAL_MONITOR" -d 1 2 3 4 5
 	bspc monitor "$EXTERNAL_MONITOR" -d 6 7 8 9 ♫
