@@ -18,6 +18,13 @@ mkdir -p $HOME/dotfiles/.backup/$timestamp
 # Installing packages
 sudo pacman -S polybar bspwm sxhkd rofi feh kitty neovim zsh autorandr --noconfirm
 
+# Prechecks
+if [[ ! -d "$HOME/.config" ]]; then
+	echo "Creating $HOME/.config" 1>&2
+	mkdir -p $HOME/.config
+fi
+
+
 # Installing oh my zsh
 
 if [[ ! -d $HOME/.oh-my-zsh ]]; then
@@ -109,3 +116,9 @@ if [[ -d $HOME/.config/autorandr ]] ; then
 	mv $HOME/.config/autorandr $HOME/dotfiles/.backup/$timestamp/autorandr
 fi
 ln -s $HOME/dotfiles/desktop/autorandr $HOME/.config/autorandr
+
+if [[ -d $HOME/.config/picom ]] ; then
+	echo "Backing up picom config" 1>&2
+	mv $HOME/.config/picom $HOME/dotfiles/.backup/$timestamp/picom
+fi
+ln -s $HOME/dotfiles/desktop/picom $HOME/.config/picom
