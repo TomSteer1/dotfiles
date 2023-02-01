@@ -72,7 +72,7 @@ let g:copilot_node_command = "/home/tom/.nvm/versions/node/v17.9.1/bin/node"
 " Binds
 
 map <F5> :NERDTreeTabsToggle<CR>
-map <F8> :bd<CR>
+map <F9> :bd<CR>
 map <F7> :Telescope find_files<CR>
 
 " vim-snippets
