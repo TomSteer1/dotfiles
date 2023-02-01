@@ -23,7 +23,7 @@ super + @space
 
 # scratchpad
 super + shift + @q
-	~/Documents/scripts/scratchpad
+	~/scripts/scratchpad
 
 # make sxhkd reload its configuration files:
 super + shift + Escape
