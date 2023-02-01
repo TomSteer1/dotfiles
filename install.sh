@@ -25,6 +25,10 @@ if [[ ! -d "$HOME/.config" ]]; then
 	mkdir -p $HOME/.config
 fi
 
+if [[ ! -d "$HOME/scripts" ]]; then
+	echo "Pulling scripts from github" 1>&2 
+	git clone https://github.com/TomSteer1/scripts.git $HOME/scripts
+fi
 
 # Installing oh my zsh
 
