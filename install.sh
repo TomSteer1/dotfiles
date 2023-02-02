@@ -79,7 +79,7 @@ ln -s $HOME/dotfiles/config/rofi $HOME/.config/rofi
 
 # Neofetch
 
-if [[ -d $HOME/.cofig/neofetch ]]; then
+if [[ -d $HOME/.config/neofetch ]]; then
 	echo "Backing up neofetch config" 1>&2
 	mv $HOME/.config/neofetch $HOME/dotfiles/.backup/$timestamp/neofetch
 fi
