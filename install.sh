@@ -16,7 +16,7 @@ mkdir -p $HOME/dotfiles/.backup/$timestamp
 
 
 # Installing packages
-sudo pacman -S polybar bspwm sxhkd rofi feh kitty neovim zsh autorandr openssh man wget vim lightdm lightdm-gtk-greeter ttf-liberation-mono-nerd xclip escrotum-git ranger --noconfirm
+sudo pacman -S polybar bspwm sxhkd rofi feh kitty neovim zsh autorandr openssh man wget vim lightdm lightdm-gtk-greeter ttf-liberation-mono-nerd xclip ranger --noconfirm
 
 
 # Prechecks
