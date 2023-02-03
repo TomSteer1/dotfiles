@@ -14,6 +14,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'neovim/nvim-lspconfig'
 	Plug 'nvim-lua/plenary.nvim'
 	Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+	Plug 'b0o/schemastore.nvim'
 
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	
@@ -60,6 +61,8 @@ colorscheme gruvbox
 
 runtime cmp.vim
 runtime source-outline.vim
+
+luafile ~/.config/nvim/lsp.lua
 
 " Auto Commands
 
