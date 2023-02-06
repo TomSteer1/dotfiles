@@ -19,6 +19,14 @@ To install just the dotfiles (not recommended)
 1. Clone repo `git clone https://github.com/TomSteer1/dotfiles` in the home directory
 2. Run `./install.sh` in the dotfile directory
 
+# Manual Fixes
+For some features to work you need to run some commands manually
+1. To enable vim plugins enter vim, ignore the errors and run `:PlugInstall`
+2. For clipboard and screenshot support you need to enable the aur or manually install the packages.<br>
+  Install yay with `curl https://raw.githubusercontent.com/TomSteer1/scripts/main/installYay | sh`
+3. Followed by `yay -Sy escrotum-git neovim-gtk` then follow the prompts
+
+
 # Config
 You can create a config file called `.config` in the `$HOME/dotfiles` directory to change the parameters of some scripts
 
