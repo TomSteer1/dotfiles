@@ -89,12 +89,7 @@ if [[ -d $HOME/.config/neofetch ]]; then
 fi
 ln -s $HOME/dotfiles/config/neofetch $HOME/.config/neofetch
 
-if [ ! command -v kitty  &> /dev/null ]; then
-	echo "Installing kitty" 1>&2
-	sudo pacman -S kitty
-else
-	echo "Kitty already installed" 1>&2
-fi
+# kitty
 
 if [[ -d $HOME/.config/kitty ]]; then
 	echo "Backing up kitty config" 1>&2
@@ -102,11 +97,30 @@ if [[ -d $HOME/.config/kitty ]]; then
 fi
 ln -s $HOME/dotfiles/config/kitty $HOME/.config/kitty
 
+# Ranger
+
+if [[ -d $HOME/.config/ranger ]]; then
+	echo "Backing up ranger config" 1>&2
+	mv $HOME/.config/ranger $HOME/dotfiles/.backup/$timestamp/ranger
+fi
+ln -s $HOME/dotfiles/config/ranger $HOME/.config/Ranger
+
+# Zathura
+
+if [[ -d $HOME/.config/zathura ]]; then
+	echo "Backing up zathura config" 1>&2
+	mv $HOME/.config/zathura $HOME/dotfiles/.backup/$timestamp/zathura
+fi	
+
+# Polybar
+
 if [[ -d $HOME/.config/polybar ]]; then
 	echo "Backing up polybar config" 1>&2
 	mv $HOME/.config/polybar $HOME/dotfiles/.backup/$timestamp/polybar
 fi
 ln -s $HOME/dotfiles/desktop/polybar $HOME/.config/polybar
+
+# Bspwm
 
 if [[ -d $HOME/.config/bspwm ]] ; then
 	echo "Backing up bspwm config" 1>&2
@@ -114,17 +128,23 @@ if [[ -d $HOME/.config/bspwm ]] ; then
 fi
 ln -s $HOME/dotfiles/desktop/bspwm $HOME/.config/bspwm
 
+# sxhkd
+
 if [[ -d $HOME/.config/sxhkd ]] ; then
 	echo "Backing up sxhkd config" 1>&2
 	mv $HOME/.config/sxhkd $HOME/dotfiles/.backup/$timestamp/sxhkd
 fi
 ln -s $HOME/dotfiles/desktop/sxhkd $HOME/.config/sxhkd
 
+# autorandr
+
 if [[ -d $HOME/.config/autorandr ]] ; then
 	echo "Backing up autorandr config" 1>&2
 	mv $HOME/.config/autorandr $HOME/dotfiles/.backup/$timestamp/autorandr
 fi
 ln -s $HOME/dotfiles/desktop/autorandr $HOME/.config/autorandr
+
+# picom
 
 if [[ -d $HOME/.config/picom ]] ; then
 	echo "Backing up picom config" 1>&2

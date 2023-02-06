@@ -1,0 +1,4 @@
+set recolor "true"
+set selection-clipboard clipboard
+map <C-r> recolor
+map i toggle_index
