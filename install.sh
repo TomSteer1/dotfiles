@@ -57,7 +57,7 @@ fi
 
 if [[ -e $HOME/.zshrc ]]; then
 	echo "Backing up current .zshrc" 1>&2
-	mv $HOME/.zshrc $HOME/dotfiles/.backup/$timestamp/.zshrc
+	mv $HOME/.zshrc $HOME/dotfiles/.backup/$timestamp/zshrc
 fi
 ln -s $HOME/dotfiles/system/zshrc $HOME/.zshrc
 
