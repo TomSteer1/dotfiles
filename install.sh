@@ -111,6 +111,7 @@ if [[ -d $HOME/.config/zathura ]]; then
 	echo "Backing up zathura config" 1>&2
 	mv $HOME/.config/zathura $HOME/dotfiles/.backup/$timestamp/zathura
 fi	
+ln -s $HOME/dotfiles/config/zathura $HOME/.config/zathura
 
 # Polybar
 
