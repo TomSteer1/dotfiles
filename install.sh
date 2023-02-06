@@ -16,7 +16,7 @@ mkdir -p $HOME/dotfiles/.backup/$timestamp
 
 
 # Installing packages
-sudo pacman -S polybar bspwm sxhkd rofi feh kitty neovim zsh autorandr openssh man wget vim lightdm lightdm-gtk-greeter ttf-liberation-mono-nerd xclip ranger zsh --noconfirm
+sudo pacman -S polybar bspwm sxhkd rofi feh kitty neovim zsh autorandr openssh man wget vim lightdm lightdm-gtk-greeter ttf-liberation-mono-nerd xclip ranger zsh python-pip --noconfirm
 
 
 # Prechecks
@@ -68,6 +68,10 @@ if [[ -d $HOME/.config/nvim ]]; then
 	mv $HOME/.config/nvim $HOME/dotfiles/.backup/$timestamp/nvim
 fi
 ln -s $HOME/dotfiles/config/nvim $HOME/.config/nvim
+
+## Dependencies for Neovim:
+pip3 install neovim
+$HOME/scripts/installNodeViaNvm
 
 # Rofi 
 
