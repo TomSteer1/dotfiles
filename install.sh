@@ -103,7 +103,7 @@ if [[ -d $HOME/.config/ranger ]]; then
 	echo "Backing up ranger config" 1>&2
 	mv $HOME/.config/ranger $HOME/dotfiles/.backup/$timestamp/ranger
 fi
-ln -s $HOME/dotfiles/config/ranger $HOME/.config/Ranger
+ln -s $HOME/dotfiles/config/ranger $HOME/.config/ranger
 
 # Zathura
 
