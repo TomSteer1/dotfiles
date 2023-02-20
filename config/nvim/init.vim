@@ -31,7 +31,6 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 	Plug 'nvim-lualine/lualine.nvim'
-	" If you want to have icons in your statusline choose one of these
 	Plug 'kyazdani42/nvim-web-devicons'
 
 	Plug 'romgrk/barbar.nvim'
@@ -40,6 +39,10 @@ call plug#begin('~/.config/nvim/plugged')
 
 	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'
+	Plug 'tpope/vim-surround'
+
+	Plug 'mbbill/undotree'
+
 
 call plug#end()
 
@@ -51,7 +54,7 @@ set tabstop=2
 set shiftwidth=2
 set ic
 set clipboard=unnamedplus
-
+set undofile
 " Theme
 
 colorscheme gruvbox
@@ -62,7 +65,7 @@ colorscheme gruvbox
 runtime cmp.vim
 runtime source-outline.vim
 
-luafile ~/.config/nvim/lsp.lua
+luafile ~/.config/nvim/lua/lsp.lua
 
 " Auto Commands
 
@@ -77,8 +80,10 @@ let g:copilot_filetypes = {"yaml": v:true}
 " Binds
 
 map <F5> :NERDTreeTabsToggle<CR>
-map <F9> :bd<CR>
+map <F6> :Telescope buffers<CR>
 map <F7> :Telescope find_files<CR>
+map <F8> :UndotreeToggle<CR>
+map <F9> :bd<CR>
 
 " vim-snippets
 
