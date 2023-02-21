@@ -40,7 +40,7 @@ icons[cancel]="\u00d7"
 declare -A actions
 #actions[lockscreen]="light-locker-command -l & disown"
 #actions[switchuser]="???"
-actions[logout]="kitty loginctl terminate-session $XDG_SESSION_ID"
+actions[logout]="bspc quit"
 actions[suspend]="systemctl suspend"
 actions[hibernate]="systemctl hibernate"
 actions[reboot]="systemctl reboot"
