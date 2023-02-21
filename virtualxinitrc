@@ -1,0 +1,4 @@
+spice-vdagent
+$HOME/scripts/loopxrandr &
+xrandr --output Virtual-1 --auto
+exec bspwm
