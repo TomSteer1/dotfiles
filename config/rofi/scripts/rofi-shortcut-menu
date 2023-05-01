@@ -27,7 +27,7 @@ icons[addToSpotify]="\uf9c6"
 icons[cancel]="\u00d7"
 
 declare -A actions
-actions[addToSpotify]="/home/tom/scripts/spotifyShortcuts -playlist=0mgkagnHc3S8km4SdnkX1W -config=/home/tom/.config/tomsteer/spotify.conf"
+actions[addToSpotify]="/home/tom/scripts/spotifyShortcuts -playlist=3r1rgGeBPz524M4ixA4Xh4 -config=/home/tom/.config/tomsteer/spotify.conf"
 
 
 # By default, ask for confirmation for actions that are irreversible
