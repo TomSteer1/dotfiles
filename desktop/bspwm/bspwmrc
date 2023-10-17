@@ -22,8 +22,8 @@ udiskie -s &
 picom &
 
 
-INTERNAL_MONITOR="eDP1"
-EXTERNAL_MONITOR="HDMI1"
+INTERNAL_MONITOR="eDP-1"
+EXTERNAL_MONITOR="DP-1"
 
 if [[ -e $HOME/dotfiles/.config ]]; then
 		source $HOME/dotfiles/.config
@@ -53,6 +53,8 @@ bspc config external_rules_command "$HOME/.config/bspwm/scripts/spotify.sh"
 
 bspc rule -a Blueman-manager state=floating center=on
 bspc rule -a Zathura state=tiled
+bspc rule -a Spotify desktop=♫ state=tiled focus=off
 
 feh --bg-center ~/Pictures/Found-Kitten-0-8-Weeks-Busy-scaled.jpg
 
+wmname LG3D
