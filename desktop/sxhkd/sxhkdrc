@@ -45,10 +45,10 @@ super + e
 
 # brightness keys
 XF86MonBrightnessUp
-	xbacklight -inc 10
+	/home/tom/scripts/brightness -inc 10
 
 XF86MonBrightnessDown
-	xbacklight -dec 10
+	/home/tom/scripts/brightness -dec 10
 
 # Screenshot
 @Print
