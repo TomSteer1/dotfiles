@@ -7,6 +7,7 @@ killall -q udiskie
 killall -q blueman-applet
 killall -q polybar
 killall -q picom
+killall -q batsignal
 while pgrep -u $UID -x polybar > /dev/null; do sleep 2; done
 if type "xrandr"; then
   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
@@ -20,15 +21,17 @@ blueman-applet &
 nm-applet &
 udiskie -s &
 picom &
+batsignal -p
 
 
 INTERNAL_MONITOR="eDP-1"
-EXTERNAL_MONITOR="DP-1"
+EXTERNAL_MONITOR="HDMI-1"
 
 if [[ -e $HOME/dotfiles/.config ]]; then
 		source $HOME/dotfiles/.config
 fi
 
+echo "$INTERNAL_MONITOR"
 
 if [[ $(xrandr -q | grep "${EXTERNAL_MONITOR} connected") ]]; then 
 	bspc monitor "$INTERNAL_MONITOR" -d 1 2 3 4 5

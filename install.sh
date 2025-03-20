@@ -153,3 +153,10 @@ if [[ -d $HOME/.config/picom ]] ; then
 	mv $HOME/.config/picom $HOME/dotfiles/.backup/$timestamp/picom
 fi
 ln -s $HOME/dotfiles/desktop/picom $HOME/.config/picom
+
+# tmux
+if [[ -e $HOME/.tmux.conf ]]; then
+	echo "Backing up tmux config" 1>&2
+	mv $HOME/.tmux.conf $HOME/dotfiles/.backup/$timestamp/tmux.conf
+fi
+ln -s $HOME/dotfiles/system/tmux.conf $HOME/.tmux.conf
