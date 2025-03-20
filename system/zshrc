@@ -51,3 +51,6 @@ fi
 
 # Fixes gpg prompts
 export GPG_TTY=$(tty)
+
+alias devKubectl="kubectl --kubeconfig=/home/tom/.kube/dev.yaml"
+alias prodKubectl="kubectl --kubeconfig=/home/tom/.kube/prod.yaml"
