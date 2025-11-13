@@ -1,4 +1,5 @@
 @theme "~/.config/rofi/theme/launcher.rasi"
 configuration {
 	run-shell-command : "kitty {cmd}";
+	dpi: 144;
 }

@@ -22,8 +22,8 @@ super + @space
 	rofi -show window
 
 # scratchpad
-super + shift + @q
-	~/scripts/scratchpad
+#super + shift + @q
+#	~/scripts/scratchpad
 
 # make sxhkd reload its configuration files:
 super + shift + Escape
@@ -31,10 +31,10 @@ super + shift + Escape
 
 # media keys
 XF86AudioRaiseVolume
-	pulseaudio-ctl up +5%
+	pulsemixer --change-volume +5
 
 XF86AudioLowerVolume
-	pulseaudio-ctl down +5%
+	pulsemixer --change-volume -5
 
 XF86AudioMute
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -45,14 +45,14 @@ super + e
 
 # brightness keys
 XF86MonBrightnessUp
-	/home/tom/scripts/brightness -inc 10
+	/home/tom/Repos/scripts/brightness -inc 10
 
 XF86MonBrightnessDown
-	/home/tom/scripts/brightness -dec 10
+	/home/tom/Repos/scripts/brightness -dec 10
 
 # Screenshot
 @Print
-	escrotum -s ~/Pictures/Screenshots/Screenshot_%Y%m%d-%H%M%S.png -e 'notify-send "Screenshot saved to $f" & xclip -selection clipboard -t image/png -i $f'
+	scrot -F ~/Pictures/Screenshots/Screenshot_%Y%m%d-%H%M%S.png -s -f -e 'notify-send "Screenshot saved to $f" & xclip -selection clipboard -t image/png -i $f'
 
 
 #
